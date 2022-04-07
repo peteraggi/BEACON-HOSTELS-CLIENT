@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<title>LIRA UNIVERSITY HOSTELS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="w3css.css">
+<link rel="stylesheet" href="style.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Roboto", Arial, Helvetica, sans-serif
+    }
+    
+    .mySlides {
+        display: none
+    }
+</style>
+
+<body class="w3-content w3-border-left w3-border-right w3-ghostwhite">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-pink w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+        <div class="w3-container w3-display-container w3-padding-16">
+            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
+            <h3>Rent</h3>
+            <h3>UGX450k(Single)</h3>
+            <h3>UGX900k(Double)</h3>
+            <h3>per semester</h3>
+            <hr>
+
+            <h3><label><i class="fa fa-male"></i>Free Rooms available</label></h3>
+            <input class="w3-input w3-border" type="number" value="10" name="Adults" min="0" max="1000">
+
+            <p>
+                <h2>For anything available:</h2>
+                <button class="w3-button w3-block w3-aqua w3-left-align" type="submit"><i class="fa fa-search w3-margin-right"></i> <i>Search availability</i></button></p>
+
+        </div>
+        <div class="w3-bar-block">
+            <a href="#apartment" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i> Hostel</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-16" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i> Subscribe</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> Contact</a>
+            <a href="#landlord" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> Landlord and Payments</a>
+
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+        <span class="w3-bar-item">Rental</span>
+        <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-ghostwhite" style="margin-left:260px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:80px"></div>
+
+        <!-- Slideshow Header -->
+        <div class="w3-container" id="apartment">
+            <h1 class="w3-text-pink">Somalia Hostel</h1>
+            <div class="w3-display-container mySlides">
+                <img src="images\double.jpg" style="width:100%;margin-bottom:-6px">
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Double Rooms and Single Rooms</p>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="images\single.jpg" style="width:100%;margin-bottom:-6px">
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Bathroom</p>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="images\somalia.jpg" style="width:100%;margin-bottom:-6px">
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Store</p>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="images\single.jpg" style="width:100%;margin-bottom:-6px">
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Single Room</p>
+                </div>
+            </div>
+        </div>
+        <div class="w3-row-padding w3-section">
+            <div class="w3-col s3">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="images\single.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
+            </div>
+            <div class="w3-col s3">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="images\somalia.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+            </div>
+            <div class="w3-col s3">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="images\double.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+            </div>
+            <div class="w3-col s3">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="images\single.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
+            </div>
+        </div>
+
+        <div class="w3-container">
+            <h4><strong>The space</strong></h4>
+            <div class="w3-row w3-large w3-aqua" style="border-radius: 15px;">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-male"></i> Double Room(Max people:2)</p>
+                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 1</p>
+                    <p><i class="fa fa-fw fa-bed"></i> Store: 1</p>
+                    <p><i class="fa fa-fw fa-male"></i> Single room(Max people:1)</p>
+                </div>
+
+            </div>
+            <hr>
+
+            <h4><strong>Amenities</strong></h4>
+            <div class="w3-row w3-large w3-aqua" style="border-radius: 15px;">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-shower"></i> National Water</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+                    <p><i class="fa fa-fw fa-plug"></i>Current Electricity</p>
+                </div>
+            </div>
+            <hr>
+
+            <h4><strong>Extra Information</strong></h4>
+            <p>Our Hostel is really clean and we like to keep it that way. Enjoy your stay at Somalia Hostel.</p>
+
+            <hr>
+            <div class="terms" style="background-color: aqua; border-radius: 8px;">
+                <h4><strong>Terms and Conditions</strong></h4>
+                <p>1.If you are booking pay UGX100k as booking fee. <br>2.The balance is paid after one month after entering.<br>3.No cooking from inside the room.<br>4.No pinning posters inside the room.
+                </p>
+            </div>
+            <h2>Subscribe to book a room</h2>
+            <p><button class="w3-button w3-pink w3-third" onclick="document.getElementById('subscribe').style.display='block'"><i>Subscribe</i></button></p>
+        </div>
+        <hr>
+
+        <!-- Contact -->
+        <div class="w3-container" id="contact">
+            <h2>Contact</h2>
+            <i class="fa fa-map-marker" style="width:30px"></i> Lira University,Ayere Village(Ayere TC)<br>
+            <i class="fa fa-phone" style="width:30px"></i> Phone: +256755312952<br>
+            <i class="fa fa-envelope" style="width:30px"> </i> Email:kugumikirizaandrew@gmail.com<br>
+            <p>Questions? Go ahead, ask them:</p>
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+                <button type="submit" class="w3-button w3-pink w3-third" style="margin-bottom: 5px;"><i>Send a Message</i></button>
+            </form>
+        </div>
+
+
+        <!-- Landlord -->
+        <div class="w3-container" id="landlord">
+            <h2>Landlord/Landlady</h2>
+            <h4>MR.KUGUMIKIRIZA ANDREW</h4>
+            <img src="/images/KIMG0141.jpg" style="border-radius: 200px;"><br>
+
+            <h4>FOR PAYMENTS:</h4>
+            <h5><strong>A/C NUMBER:32020014010</strong></h5>
+            <h6><b>MOBILE MONEY CONTACTS:0782078321/0755312952</b></h6>
+            <button type="submit" class="w3-button w3-pink w3-third" style="margin-bottom: 5px;"><i>Pay via Mobile money</i></button>
+
+        </div>
+
+
+
+        <!-- End page content -->
+    </div>
+
+    <!-- Subscribe Modal -->
+    <div id="subscribe" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom w3-padding-large">
+            <div class="w3-container w3-white w3-center">
+                <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
+                <h2 class="w3-wide"><i>SUBSCRIBE</i></h2>
+                <p>Join our mailing list to receive updates on available rooms</p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+                <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'"><i>Subscribe</i></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+#landlord h4,
+h5,
+h6 {
+    color: green;
+}
+
+#landlord {
+    background-color: aqua;
+    margin-top: 5px;
+    border-radius: 15px;
+}
+
+#contact {
+    background-color: aqua;
+    border-radius: 15px;
+}
